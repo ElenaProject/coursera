@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Position</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+			/*width: 1000px;*/
+			margin: 0;
+		}
+		
+		
+		/* Sticky */
+
+		.sticky_wrap {
+			width: 400px;
+			min-height: 700px;
+			background-color: #009d4b;
+
+			padding-top: 0.1px;
+			margin: 40px 0 50px 0;
+			position: relative;
+			/*opacity: 0.6;*/
+		}
+
+		.sticky_box {
+			position: sticky;
+			top: 10px;
+			bottom: 100px;
+
+			background-color: #3989c9;
+			color: #fff;
+
+			padding: 10px;
+			margin-top: 10px;
+		}
+
+		.test {
+			position: absolute;
+			top: 40px;
+			left: 100px;
+			
+
+			background-color: yellow;
+			color: #fff;
+
+			padding: 10px;
+		}
+
+		/* Fixed */
+
+		.prompt {
+			box-sizing: border-box;
+			width: 150px;
+
+			border: 1px solid #009d4b;
+			padding: 10px 10px 20px 10px;
+			margin: 0;
+
+			position: fixed;
+			top: 25px;
+			right: 25px;
+		}
+
+		.prompt p {
+			margin: 0;			
+		}
+
+		.prompt input {
+			
+			display: none;
+			/*position: absolute;
+			bottom: -5px;
+			right: -5px;
+
+			background-color: #009d4b;
+			border: none;*/
+
+
+		}
+
+		.prompt label{
+			position: absolute;
+			bottom: -5px;
+			right: -5px;
+
+			width: 80px;
+			height: 20px;
+			background-color: #009d4b;
+
+			
+			color: #fff;
+			border-radius: 2px;
+			font: 300 13px/20px sans-serif;
+			text-align: center;
+
+			transition: transform .2s,
+						background-color .5s;
+
+		}
+
+		/* Buttom */
+
+		label:hover {
+			background-color: #01DF3A;
+			border: 1px solid #009d4b;
+		}
+
+		input:active ~ label {
+			background-color: #0B6121;
+			transform: scale(0.95);
+		}
+
+		/* Float */
+
+		.float_img {
+			float: right;
+			margin: 0 0 20px 20px;
+
+			width: 500px;
+			background-color: #819FF7;
+		}
+
+		.float {
+			background-color: #819FF7;
+			padding: 40px;
+			margin: 20px 0 0 0;
+			/*overflow: auto;	*/
+			/*clear: both;*/
+		}
+
+		/*.float::after {
+			content: '';
+			clear: both;
+			display: block;*/
+		}
+
+		.float_p {
+			/*clear: right;*/
+
+		}
+
+		.float_div {
+			background-color: gold;
+		}
+
+		.float_div h2{
+			float: left;
+			background-color: silver;
+			margin: 10px;	
+
+			width: 200px;
+			height: 500px;
+		}
+
+		.clearfix {
+			clear: both;
+		}
+
+
+
+	</style>
+</head>
+<body>
+		
+	<div class="sticky inline">
+		<div class="sticky_wrap">
+			<div class="sticky_box">
+				Текст 1
+			</div>
+			<div class="test">Test</div>
+		</div>
+		<div class="sticky_wrap">
+			<div class="sticky_box">
+				Тескт 2
+			</div>
+		</div>	
+	</div>
+
+	<div class="prompt">
+		<p>Для того, чтобы пользоваться сайтом, Вам нужно разрешить использование cookies.</p>
+		<input type="button" name="permission" value="Разрешаю" id="button">
+		<label for="button">Разрешаю</label>
+	</div>
+
+	
+	<div class="float">
+		<div class="float_div"><h2>Header</h2></div>
+		<img class="float_img" src="1.jpg">
+		<p class="float_p">Сибирский хаски — заводская специализированная порода собак, выведенная чукчами северо-восточной части Сибири и зарегистрированная американскими кинологами в 1930-х годах как ездовая собака, полученная от аборигенных собак Дальнего Востока России, в основном из Анадыря, Колымы, Камчатки у местных оседлых приморских племён — юкагиров, кереков, азиатских эскимосов и приморских чукчей — анкальын (приморские, поморы — от анкы (море))</p>
+		<div class="clearfix"></div>
+	</div>
+	
+	<div class="float">Чтобы отменить действие обтекания, свойство clear надо добавлять к элементу, идущему после элемента с float. Обычно вводят универсальный класс, к примеру, clearfix и вставляют пустой <div> с этим классом</div>
+	
+	
+
+</body>
+</html>

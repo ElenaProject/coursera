@@ -1,0 +1,447 @@
+
+/*  ================= RESET =======================  */
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+	/* Делаем элементы блочными */
+nav, footer, header, aside {
+    display: block; }
+
+  	/* Уравниваем поведение шрифтов и элементов для разных browsers (в т.ч. самовольное увеличение шрифта, н-р на Iphone*/
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; 
+}
+
+	/* Наследование font-family для форм */
+input, button, textarea {
+    font-family: inherit; 
+}
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+	/* Убираем стиль для ссылок */
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+	/* Убираем стиль для списков */
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+	/* Обнуляем заголовки */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+/*  ========================================  */
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: #4A4949;
+	background-color: #ebebeb;
+	display: flex;
+	flex-direction: column;
+}
+.title {
+	font-size: 45px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-align: center;
+	margin: 65px auto;
+	color: #5A5A5A;
+}
+main {
+	flex: 1;
+	margin: 0px 45px;
+}
+
+.main-body {
+	display: flex;
+	height: 100%;
+}
+
+
+/*  ================= NAVIGATION_CHECKING =======================  */
+.input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+#abyssinian:checked ~ .nav [for="abyssinian"], #british:checked ~ .nav [for="british"], 
+#russian:checked ~ .nav [for="russian"], #siamese:checked ~ .nav [for="siamese"],
+#abyssinian:focus ~ .nav [for="abyssinian"], #british:focus ~ .nav [for="british"], 
+#russian:focus ~ .nav [for="russian"], #siamese:focus ~ .nav [for="siamese"],
+#abyssinian:hover ~ .nav [for="abyssinian"], #british:hover ~ .nav [for="british"], 
+#russian:hover ~ .nav [for="russian"], #siamese:hover ~ .nav [for="siamese"] {
+	background-color: #949292;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+#abyssinian:checked ~ .galery :not(.abyssinian), #british:checked ~ .galery :not(.british),
+#russian:checked ~ .galery :not(.russian), #siamese:checked ~ .galery :not(.siamese) {
+	opacity: 0.5;
+}
+
+/*  ================= NAVIGATION =======================  */
+.nav {
+	background-color: #d9d9d9;
+	flex: 0 1 16vw;
+	margin: 0 12px 0 0;
+}
+.nav__ul {
+	position: sticky;
+	top: 0;
+}
+.nav__label {
+	display: block;
+	padding: 25px;
+	border-bottom: 1px solid #949292;
+	font-size: 19px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1324px) {
+	.nav__label {
+		padding: 25px 20px;
+		font-size: 21px;
+	}
+}
+
+
+/*  ================= GALERY =======================  */
+
+.galery {
+	flex: auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -5px -10px;
+}
+.galery__item {
+	flex: 1 1 250px;
+	height: 290px;
+	margin: 0px 5px 10px;
+	background: center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.size2x {
+	flex: 2 1 510px;
+}
+.sizefull {
+	flex: 2 1 795px;
+}
+
+@media screen and (max-width: 1365px) {
+	.galery__item {
+		flex: 1 1 200px;
+	}
+	.size2x {
+		flex: 2 1 410px;
+	}
+	.sizefull {
+		flex: 2 1 650px;
+	}
+}
+@media screen and (max-width: 1140px) {
+	.size2x {
+		flex: 2 1 300px;
+	}
+}
+
+.galery__item:hover {
+	border: 1px solid #E3E0E0;
+}
+.galery__item-name {
+	display: none;
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+	background: rgb(0,0,0,0.4);
+	color: #fff;
+	padding: 15px 20px;
+	font-size: 20px;
+}
+.galery__item:hover .galery__item-name {
+	display: block;
+}
+.galery__item_1 {
+	background-image: url(img/1.jpg);
+}
+.galery__item_2 {
+	background-image: url(img/2.jpg);
+}
+.galery__item_3 {
+	background-image: url(img/3.jpg);
+}
+.galery__item_4 {
+	background-image: url(img/7.jpg);
+}
+.galery__item_5 {
+	background-image: url(img/5.jpg);
+}
+.galery__item_6 {
+	background-image: url(img/6.jpg);
+}
+.galery__item_7 {
+	background-image: url(img/7.jpg);
+}
+.galery__item_8 {
+	background: url(img/8.jpg) 0 -100px;
+}
+
+
+/*  ================= RATING =======================  */
+.rating {
+	background-color: #d9d9d9;
+	flex: 0 1 18vw;
+	align-self: flex-start;
+	margin: 0 0 0 8px;
+	padding: 15px;
+	position: sticky;
+	top: 0;
+}
+.rating__title {
+	text-transform: uppercase;
+	font-size: 27px;
+	display: block;
+	padding: 10px 25px 20px;
+	border-bottom: 1px solid #949292;
+	text-align: center;
+}
+
+.rating__button {
+	display: block;
+	width: 100%;
+	padding: 10px 8px;
+	color: #fff;
+	letter-spacing: 1px;
+	border-bottom: 1px solid #949292;
+	background: #949292;
+	position: relative;
+}
+.rating__icon {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	height: 15px;
+	transition:  transform .5s;
+}
+#rating-button:hover ~ .rating .rating__button, #rating-button:focus ~ .rating .rating__button {
+	background-color: #4A4949;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+#rating-button:checked ~ .rating .rating__icon {
+	transform: rotate(180deg);
+} 
+
+.rating__ul {
+	display: none;
+	font-size: 15px;
+	letter-spacing: 1px;
+	background-color: #fff;
+	width: 100%;
+}
+.rating__ul li {
+	
+}
+.rating__ul label {
+	cursor: pointer;
+	display: block;
+	padding: 10px 15px;
+}
+#rating-button:checked ~ .rating .rating__ul {
+	display: block;
+}
+
+#alphabet:checked ~ .rating .rating__label_alphabet, #from-big:checked ~ .rating .rating__label_from-big,
+#from-small:checked ~ .rating .rating__label_from-small,
+#alphabet:hover ~ .rating .rating__label_alphabet, #from-big:hover ~ .rating .rating__label_from-big,
+#from-small:hover ~ .rating .rating__label_from-small,
+#alphabet:focus ~ .rating .rating__label_alphabet, #from-big:focus ~ .rating .rating__label_from-big,
+#from-small:focus ~ .rating .rating__label_from-small {
+	background-color: #4A4949;
+	color: #fff;
+}
+#from-small:checked ~ .galery {
+	flex-direction: row-reverse;
+	flex-wrap: wrap-reverse;
+}
+#from-big:checked ~ .galery .galery__item, #from-small:checked ~ .galery .galery__item {
+	order: var(--order);
+}
+
+.rating__wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 0px  8px;
+	border-bottom: 1px solid #949292;
+	margin: 20px 0px 0px 0px;
+}
+.rating-item {
+	font-size: 18px;
+	margin: 0px 0px 30px 0px;
+}
+.rating-item__title {
+	letter-spacing: .5px;
+}
+.rating-item__rating {
+	margin: 10px 0px 0px 0px;
+	display: flex;
+	justify-content: space-between;
+}
+.rating-item__color {
+	height: 20px;
+}
+.position_9 .rating-item__color, .position_10 .rating-item__color {
+	background: linear-gradient(to right, #26DE63, #fff);
+}
+.position_5 .rating-item__color, .position_6 .rating-item__color,
+.position_7 .rating-item__color, .position_8 .rating-item__color {
+	background: linear-gradient(to right, #F6EF1D, #fff);
+}
+.position_4 .rating-item__color, .position_3 .rating-item__color,
+.position_2 .rating-item__color, .position_1 .rating-item__color {
+	background: linear-gradient(to right, #DE2637, #fff);
+}
+
+.rating-item__color {
+	flex-basis: var(--flex-basis);
+}
+.rating-item__num {
+	flex: 0 1 15%;
+	text-align: right;
+	font-weight: 700;
+	margin: 0px 0px 0px 5px;
+}
+/*  ================= RATING_ROTATION =======================  */
+
+
+/* ------------- Variables --------------*/
+
+.position_10 {
+	--order: 1;
+	--flex-basis: 85%;
+}
+.position_9 {
+	--order: 2;
+	--flex-basis: 75%;
+}
+.position_8 {
+	--order: 3;
+	--flex-basis: 70%;
+}
+.position_7 {
+	--order: 4;
+	--flex-basis: 65%;
+}
+.position_6 {
+	--order: 5;
+	--flex-basis: 60%;
+}
+.position_5 {
+	--order: 6;
+	--flex-basis: 55%;
+}
+.position_4 {
+	--order: 7;
+	--flex-basis: 40%;
+}
+.position_3 {
+	--order: 8;
+	--flex-basis: 30%;
+}
+.position_2 {
+	--order: 9;
+	--flex-basis: 20%;
+}
+.position_1 {
+	--order: 10;
+	--flex-basis: 15%;
+}
+
+/* Модификатор для сортировки по алфавиту по первой букве и значение order по номеру буквы в русскоязычном алфавите
+для автоматизации работы контент-менеджера можно добавить все позиции алфавита, 
+дабы не было необходимости лезть в css */
+
+.alphabet_a {
+	--alphabet: 1;
+}
+.alphabet_b {
+	--alphabet: 2;
+}
+.alphabet_r {
+	--alphabet: 18;
+}
+.alphabet_s {
+	--alphabet: 19;
+}
+
+
+/*------------ Checking ------------------*/
+
+#from-small:checked ~ .rating .rating__wrapper {
+	flex-direction: column-reverse;
+}
+#from-big:checked ~ .rating .rating-item, #from-small:checked ~ .rating .rating-item {
+	order: var(--order);
+}
+#alphabet:checked ~ .rating .rating-item {
+	order: var(--alphabet);
+}
+
+#alphabet:checked ~ .galery .galery__item {
+	order: var(--alphabet);
+}
+#from-small:checked ~ .galery {
+	flex-direction: row-reverse;
+	flex-wrap: wrap-reverse;
+}
+#from-big:checked ~ .galery .galery__item, #from-small:checked ~ .galery .galery__item {
+	order: var(--order);
+}
+
+/*  ================= FOOTER =======================  */
+footer {
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.footer__copyrights {}
+.footer__address {
+	font-style: normal;
+}
+.footer__address a {
+	color: #4A4949;
+}

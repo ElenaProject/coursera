@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title lang="en">Coursera_Flex/grid</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1 class="title">Бабуленькины котятки</h1>
+	<main>
+		<div class="main-body">
+			
+			<!-- Inputs  -->
+
+			<!--  Выбор породы  -->
+			<input type="radio" name="type" class="input" id="abyssinian">
+			<input type="radio" name="type" class="input" id="british">
+			<input type="radio" name="type" class="input" id="russian">
+			<input type="radio" name="type" class="input" id="siamese">
+			<!--  Кнопка вызова сортировки -->
+			<input class="input" type="checkbox" id="rating-button">
+			<!--  Сортировка в рейтинге -->
+			<input class="input" type="radio" name="rating" id="alphabet">
+			<input class="input" type="radio" name="rating" id="from-big">
+			<input class="input" type="radio" name="rating" id="from-small">
+
+			<nav class="nav">
+				<ul class="nav__ul">
+					<li class="nav__li"><label for="abyssinian" class="nav__label">Абиссинская</label></li>
+					<li class="nav__li"><label for="british" class="nav__label">Британская</label></li>
+					<li class="nav__li"><label for="russian" class="nav__label">Русская голубая</label></li>
+					<li class="nav__li"><label for="siamese" class="nav__label">Сиамская</label></li>
+				</ul>
+			</nav>
+
+			<section class="galery">
+				<div class="galery__item galery__item_1 abyssinian alphabet_a position_9">
+					<div class="galery__item-name">Пушок, 5 лет</div>
+				</div>
+				<div class="galery__item galery__item_2 russian size2x alphabet_r number_10">
+					<div class="galery__item-name">Пушок, 5 лет</div>
+				</div>
+				<div class="galery__item galery__item_3 british alphabet_b position_8">
+					<div class="galery__item-name">Пушок, 5 лет</div>
+				</div>
+				<div class="galery__item galery__item_4 british alphabet_b position_8">
+					<div class="galery__item-name">Пушок, 5 лет</div>
+				</div>
+				<div class="galery__item galery__item_5 siamese alphabet_s position_4">
+					<div class="galery__item-name">Пушок, 5 лет</div>
+				</div>
+				<div class="galery__item galery__item_6 abyssinian size2x alphabet_a position_9">
+					<div class="galery__item-name">Пушок, 5 лет</div>
+				</div>
+				<div class="galery__item galery__item_7 russian alphabet_r position_10">
+					<div class="galery__item-name">Пушок, 5 лет</div>
+				</div>
+				<div class="galery__item galery__item_8 siamese sizefull alphabet_s position_4">
+					<div class="galery__item-name">Пушок, 5 лет</div>
+				</div>
+			</section>
+
+			<aside class="rating">
+				<h3 class="rating__title">Рейтинг</h3>
+				<label class="rating__button" for="rating-button">
+					Сортировать
+					<img class="rating__icon" src="icon/down.svg" alt="sort_arrow_img">
+				</label>
+				<ul class="rating__ul">
+					<li><label class="rating__label rating__label_alphabet" for="alphabet">По алфавиту</label></li>
+					<li><label class="rating__label rating__label_from-big" for="from-big">По убыванию</label></li>
+					<li><label class="rating__label rating__label_from-small" for="from-small">По возрастанию</label></li>
+				</ul>
+				<div class="rating__wrapper">
+					<div class="rating-item position_8 alphabet_b">
+						<div class="rating-item__title">Британская</div>
+						<div class="rating-item__rating">
+							<span class="rating-item__color"></span>
+							<span class="rating-item__num">8</span>
+						</div>
+					</div>
+					<div class="rating-item position_10 alphabet_r">
+						<div class="rating-item__title">Русская голубая</div>
+						<div class="rating-item__rating">
+							<span class="rating-item__color"></span>
+							<span class="rating-item__num">10</span>
+						</div>
+					</div>
+					<div class="rating-item position_9 alphabet_a">
+						<div class="rating-item__title">Абиссинская</div>
+						<div class="rating-item__rating">
+							<span class="rating-item__color"></span>
+							<span class="rating-item__num">9</span>
+						</div>
+					</div>
+					<div class="rating-item position_4 alphabet_s">
+						<div class="rating-item__title">Сиамская</div>
+						<div class="rating-item__rating">
+							<span class="rating-item__color"></span>
+							<span class="rating-item__num">4</span>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+	</main>
+	<footer>
+		<div class="footer__copyrights">&copy; ООО Бабуленькины котятки, <time datetime="2015">2015</time></div>
+		<address class="footer__address"><a href="https://yandex.ru/maps/2/saint-petersburg/geo/ulitsa_kotovskogo/8018629/?ll=30.331838%2C59.961337&z=16.97" target="_blank">Наш адрес: улица Котовая, д.5</a></address>
+	</footer>
+</body>
+</html>
+
+<!-- для создания нового пункта в навигации добавляем:
+	1. line 21 
+		<input type="radio" name="type" class="input" id="НАЗВАНИЕ ПОРОДЫ_eng">
+	2. line 34
+		<li class="nav__li"><label for="НАЗВАНИЕ ПОРОДЫ_eng" class="nav__label">НАЗВАНИЕ ПОРОДЫ</label></li>
+ -->
+
+<!-- для создания новой карточки в галерее добавляем:
+	1. 
+		<div class="galery__item galery__item_1(порядковый номер карточки) abyssinian(НАЗВАНИЕ ПОРОДЫ_eng) alphabet_a(первая буква на латинице) position_9(позиция в рейтинге)">
+			<div class="galery__item-name">Пушок, 5 лет</div>
+		</div>
+ -->
+ 
