@@ -72,11 +72,11 @@ body {
 	flex-direction: column;
 }
 .title {
-	font-size: 45px;
-	font-weight: 700;
+	font-size: 43px;
+	font-weight: 400;
 	letter-spacing: 3px;
 	text-align: center;
-	margin: 65px auto;
+	margin: 40px auto;
 	color: #5A5A5A;
 }
 main {
